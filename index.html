@@ -6,6 +6,8 @@
   <title>WELCOME TO THE HOME OF C SIX</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -14,22 +16,19 @@
       overflow-x: hidden;
     }
 
-    /* Header */
     header {
-      background: linear-gradient(145deg, #000000, #111111);
+      background: #000;
       padding: 20px;
       text-align: center;
       border-bottom: 2px solid #00ffea;
       box-shadow: 0 0 20px #00ffea;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      position: relative;
     }
 
     header h1 {
-      font-size: 2.7em;
+      font-size: 2.5em;
       color: #00ffea;
-      text-shadow: 0 0 15px #00ffea;
+      text-shadow: 0 0 10px #00ffea;
       margin-bottom: 10px;
     }
 
@@ -38,32 +37,57 @@
     }
 
     nav a {
-      display: inline-block;
       color: #fff;
       text-decoration: none;
       margin: 0 12px;
       font-weight: bold;
-      font-size: 1.1em;
-      padding: 8px 16px;
-      border: 1px solid #00ffea;
-      border-radius: 8px;
-      transition: 0.4s;
-      background-color: rgba(0, 255, 234, 0.1);
+      font-size: 1em;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #000;
-      background-color: #00ffea;
-      box-shadow: 0 0 15px #00ffea;
+      color: #00ffea;
+      text-shadow: 0 0 10px #00ffea;
+    }
+
+    .profile-pic {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .glow-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #00ffea;
+      box-shadow: 0 0 20px #00ffea;
+      object-fit: cover;
+      animation: profileGlow 2s infinite alternate;
+    }
+
+    .profile-name {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #00ffea;
+      text-shadow: 0 0 8px #00ffea;
+    }
+
+    @keyframes profileGlow {
+      0% {
+        box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+      }
+      100% {
+        box-shadow: 0 0 20px #00ffea, 0 0 35px #00ffea;
+      }
     }
 
     section {
-      padding: 30px 20px;
+      padding: 40px 20px;
       border-bottom: 1px solid #00ffea;
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1581090700227-1e8d1b553569') center/cover;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8d1b553569') center/cover no-repeat;
       height: 100vh;
       color: #fff;
       text-shadow: 0 0 10px #00ffea;
@@ -72,7 +96,6 @@
       justify-content: center;
       flex-direction: column;
       text-align: center;
-      padding: 0 15px;
     }
 
     .hero h2 {
@@ -81,19 +104,9 @@
 
     .bio, .about, .contact {
       background-color: #121212;
-      box-shadow: 0 0 15px #00ffea inset;
+      box-shadow: 0 0 20px #00ffea inset;
       margin-bottom: 20px;
       border-radius: 10px;
-      padding: 20px;
-    }
-
-    .section-image {
-      width: 100%;
-      max-width: 400px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #00ffea;
     }
 
     .contact a {
@@ -107,11 +120,6 @@
     .contact a:hover {
       color: #00ffea;
       transform: scale(1.2);
-    }
-
-    .contact p a {
-      font-size: 0.85em;
-      word-break: break-word;
     }
 
     footer {
@@ -134,19 +142,23 @@
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header h1 {
-        font-size: 1.9em;
-      }
-
-      .hero h2 {
-        font-size: 1.4em;
+        font-size: 2em;
       }
 
       nav a {
-        display: block;
-        margin: 8px auto;
-        width: 80%;
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 0.9em;
+      }
+
+      .hero h2 {
+        font-size: 1.7em;
+      }
+
+      .contact a {
+        font-size: 1.5em;
       }
     }
   </style>
@@ -162,6 +174,11 @@
     </nav>
   </header>
 
+  <div class="profile-pic">
+    <img src="https://images.unsplash.com/photo-1614282281748-5f99a0450aa2" alt="C SIX Profile Picture" class="glow-pic">
+    <h3 class="profile-name">Eze Henry Chukwuemeka (C SIX)</h3>
+  </div>
+
   <section class="hero" id="home">
     <h2>WELCOME TO THE HOME OF C SIX</h2>
     <p>The Future Is Coded In Me</p>
@@ -172,34 +189,25 @@
     <p><strong>Name:</strong> Eze Henry Chukwuemeka Also known as (C SIX)</p>
     <p><strong>Role:</strong> Cyber-inspired Web Developer & Creative Technologist</p>
     <p><strong>Mission:</strong> To build futuristic, stunning websites that redefine the digital experience.</p>
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Cyber Bio" class="section-image">
   </section>
 
   <section class="about" id="about">
     <h2>About Me</h2>
     <p>Hi, I’m C SIX — a digital creator and design hacker. I specialize in cyber-themed interfaces, responsive layouts, and JavaScript-powered web magic. From stylish one-pagers to animated dashboards, I bring innovation to life.</p>
     <p>I work with tools like HTML, CSS, JavaScript, and Python (for back-end magic). I enjoy building futuristic designs that react and respond beautifully to users. Every website I create is made to stand out, engage, and impress.</p>
-    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="About Tech" class="section-image">
   </section>
 
   <section class="contact" id="contact">
     <h2>Contact Me</h2>
     <p>Feel free to reach out or connect via my socials.</p>
     <p><strong>Phone:</strong> +234 814 497 4822</p>
-    <p><strong>Email:</strong> <a href="mailto:ezehenrychukwuemeka16@email.com" style="color: #00ffea;">ezehenrychukwuemeka16@email.com</a></p>
-    <img src="https://images.unsplash.com/photo-1526378722589-74d98dbed1f5" alt="Contact" class="section-image">
+    <p><strong>Email:</strong> <a href="mailto:ezehenrychukwuemeka16@email.com" style="color: #00ffea; font-size: 0.9em;">ezehenrychukwuemeka16@email.com</a></p>
     <div>
       <a href="https://wa.me/2348144974822" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/ezehenry.c._?igsh=NXRsYXR4OTJld3Fh" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@csix44?_t=ZM-8wMIYdcIKDV&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
       <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
-  </section>
-
-  <section class="about">
-    <h2>Projects Preview</h2>
-    <p>A glimpse of what I can do visually and functionally.</p>
-    <img src="https://images.unsplash.com/photo-1549921296-3a6b92b1722f" alt="Preview" class="section-image">
   </section>
 
   <footer>
