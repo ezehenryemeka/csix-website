@@ -6,7 +6,6 @@
   <title>WELCOME TO THE HOME OF C SIX</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Cyberpunk Dark Theme CSS */
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -24,19 +23,19 @@
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       color: #00ffea;
       text-shadow: 0 0 10px #00ffea;
     }
 
     nav {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 10px;
       font-weight: bold;
       transition: 0.3s;
     }
@@ -47,7 +46,7 @@
     }
 
     section {
-      padding: 50px;
+      padding: 30px 20px;
       border-bottom: 1px solid #00ffea;
     }
 
@@ -60,30 +59,38 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      text-align: center;
+      padding: 0 15px;
     }
 
     .hero h2 {
-      font-size: 3em;
+      font-size: 2em;
     }
 
     .bio, .about, .contact {
       background-color: #121212;
-      box-shadow: 0 0 20px #00ffea inset;
+      box-shadow: 0 0 15px #00ffea inset;
       margin-bottom: 20px;
       border-radius: 10px;
+      padding: 20px;
     }
 
     .contact a {
       display: inline-block;
       margin: 10px;
       color: #fff;
-      font-size: 2em;
+      font-size: 1.8em;
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .contact a:hover {
       color: #00ffea;
       transform: scale(1.2);
+    }
+
+    .contact p a {
+      font-size: 0.85em;
+      word-break: break-all;
     }
 
     footer {
@@ -105,6 +112,35 @@
         text-shadow: 0 0 20px #00ffea;
       }
     }
+
+    /* Background photo section */
+    .custom-bg {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover no-repeat;
+      height: 300px;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffea;
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .hero h2 {
+        font-size: 1.5em;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .contact a {
+        font-size: 1.5em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -122,6 +158,8 @@
     <h2>WELCOME TO THE HOME OF C SIX</h2>
     <p>The Future Is Coded In Me</p>
   </section>
+
+  <div class="custom-bg"></div> <!-- Background Image Area -->
 
   <section class="bio">
     <h2>Who Am I?</h2>
@@ -143,8 +181,8 @@
     <p><strong>Email:</strong> <a href="mailto:ezehenrychukwuemeka16@email.com" style="color: #00ffea;">ezehenrychukwuemeka16@email.com</a></p>
     <div>
       <a href="https://wa.me/2348144974822" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://instagram.com/https://www.instagram.com/ezehenry.c._?igsh=NXRsYXR4OTJld3Fh" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/https://www.tiktok.com/@csix44?_t=ZM-8wMIYdcIKDV&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/ezehenry.c._?igsh=NXRsYXR4OTJld3Fh" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@csix44?_t=ZM-8wMIYdcIKDV&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
       <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
   </section>
@@ -154,7 +192,6 @@
   </footer>
 
   <script>
-    // Glow effect on scroll
     window.addEventListener("scroll", () => {
       document.querySelectorAll('section').forEach(sec => {
         const rect = sec.getBoundingClientRect();
