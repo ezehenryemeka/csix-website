@@ -14,18 +14,23 @@
       overflow-x: hidden;
     }
 
+    /* Header */
     header {
-      background: #000;
+      background: linear-gradient(145deg, #000000, #111111);
       padding: 20px;
       text-align: center;
       border-bottom: 2px solid #00ffea;
       box-shadow: 0 0 20px #00ffea;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     header h1 {
-      font-size: 2.5em;
+      font-size: 2.7em;
       color: #00ffea;
-      text-shadow: 0 0 10px #00ffea;
+      text-shadow: 0 0 15px #00ffea;
+      margin-bottom: 10px;
     }
 
     nav {
@@ -33,16 +38,23 @@
     }
 
     nav a {
+      display: inline-block;
       color: #fff;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 12px;
       font-weight: bold;
-      transition: 0.3s;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border: 1px solid #00ffea;
+      border-radius: 8px;
+      transition: 0.4s;
+      background-color: rgba(0, 255, 234, 0.1);
     }
 
     nav a:hover {
-      color: #00ffea;
-      text-shadow: 0 0 10px #00ffea;
+      color: #000;
+      background-color: #00ffea;
+      box-shadow: 0 0 15px #00ffea;
     }
 
     section {
@@ -75,6 +87,15 @@
       padding: 20px;
     }
 
+    .section-image {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00ffea;
+    }
+
     .contact a {
       display: inline-block;
       margin: 10px;
@@ -90,7 +111,7 @@
 
     .contact p a {
       font-size: 0.85em;
-      word-break: break-all;
+      word-break: break-word;
     }
 
     footer {
@@ -113,32 +134,19 @@
       }
     }
 
-    /* Background photo section */
-    .custom-bg {
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') center/cover no-repeat;
-      height: 300px;
-      margin: 30px 0;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #00ffea;
-    }
-
-    /* Mobile Responsive Adjustments */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.8em;
+        font-size: 1.9em;
       }
 
       .hero h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
       }
 
       nav a {
         display: block;
-        margin: 10px 0;
-      }
-
-      .contact a {
-        font-size: 1.5em;
+        margin: 8px auto;
+        width: 80%;
       }
     }
   </style>
@@ -159,19 +167,19 @@
     <p>The Future Is Coded In Me</p>
   </section>
 
-  <div class="custom-bg"></div> <!-- Background Image Area -->
-
   <section class="bio">
     <h2>Who Am I?</h2>
     <p><strong>Name:</strong> Eze Henry Chukwuemeka Also known as (C SIX)</p>
     <p><strong>Role:</strong> Cyber-inspired Web Developer & Creative Technologist</p>
     <p><strong>Mission:</strong> To build futuristic, stunning websites that redefine the digital experience.</p>
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Cyber Bio" class="section-image">
   </section>
 
   <section class="about" id="about">
     <h2>About Me</h2>
     <p>Hi, I’m C SIX — a digital creator and design hacker. I specialize in cyber-themed interfaces, responsive layouts, and JavaScript-powered web magic. From stylish one-pagers to animated dashboards, I bring innovation to life.</p>
     <p>I work with tools like HTML, CSS, JavaScript, and Python (for back-end magic). I enjoy building futuristic designs that react and respond beautifully to users. Every website I create is made to stand out, engage, and impress.</p>
+    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="About Tech" class="section-image">
   </section>
 
   <section class="contact" id="contact">
@@ -179,12 +187,19 @@
     <p>Feel free to reach out or connect via my socials.</p>
     <p><strong>Phone:</strong> +234 814 497 4822</p>
     <p><strong>Email:</strong> <a href="mailto:ezehenrychukwuemeka16@email.com" style="color: #00ffea;">ezehenrychukwuemeka16@email.com</a></p>
+    <img src="https://images.unsplash.com/photo-1526378722589-74d98dbed1f5" alt="Contact" class="section-image">
     <div>
       <a href="https://wa.me/2348144974822" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/ezehenry.c._?igsh=NXRsYXR4OTJld3Fh" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@csix44?_t=ZM-8wMIYdcIKDV&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
       <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
+  </section>
+
+  <section class="about">
+    <h2>Projects Preview</h2>
+    <p>A glimpse of what I can do visually and functionally.</p>
+    <img src="https://images.unsplash.com/photo-1549921296-3a6b92b1722f" alt="Preview" class="section-image">
   </section>
 
   <footer>
